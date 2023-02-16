@@ -14,6 +14,23 @@ namespace New_4_5_final
             Console.WriteLine("Введите логин");
             User.Login = Console.ReadLine();
             User.LoginLength = User.Login.Length;
+
+            Console.WriteLine("Есть ли у вас животные? Да или Нет");
+            if (Console.ReadLine() == "Да")
+            {
+                User.HavePets = true;
+            }
+
+            Console.WriteLine("Введите ваш возраст:");
+            User.PersonAge = double.Parse(Console.ReadLine());
+            User.favcolors = new string[3];
+            Console.WriteLine("Введите три любимых цвета пользователя");
+            for (int i = 0; i < User.favcolors.Length; i++)
+            {
+                User.favcolors[i] = Console.ReadLine();
+            }
+
+
         }
     }
 }
